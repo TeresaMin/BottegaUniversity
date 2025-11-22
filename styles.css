@@ -1,0 +1,255 @@
+/* Variables de Color */
+:root {
+    --oscuro-fondo: #1c1d22; 
+    --oscuro-cabecera: #212121; 
+    --verde-principal: #55a855; 
+    --gris-oscuro: #3b3b3b; 
+    --blanco: #ffffff;
+    --gris-enlace: #9d9d9d; 
+    --gris-texto: #b2b2b2; 
+}
+
+/* Reset y Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: var(--blanco);
+    background-color: var(--oscuro-fondo); 
+    min-height: 100vh;
+    position: relative; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--gris-enlace);
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--blanco);
+}
+
+/* --- CABECERA --- */
+.cabecera {
+    background-color: var(--oscuro-cabecera);
+    padding: 0 15px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+}
+
+.nav-bar::before {
+    content: "EXPLORE";
+    color: var(--gris-enlace);
+    font-size: 0.8rem;
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.logo img {
+    height: 25px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.nav-links li:first-child a {
+    font-weight: 700;
+    color: var(--blanco);
+}
+
+.link-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.chevron {
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Botones y Enlaces */
+.btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-crear {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icono-buscar {
+    font-size: 1.1rem;
+    color: var(--gris-enlace);
+}
+
+.btn-login {
+    background-color: transparent;
+    border: 1px solid #3d3d3d; 
+    color: var(--gris-enlace);
+}
+
+.btn-registro {
+    color: var(--oscuro-fondo);
+    background-color: var(--verde-principal);
+    font-weight: 700;
+}
+
+/* --- SECCIÓN PRINCIPAL (HERO) --- */
+.seccion-principal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding: 0 20px;
+    gap: 80px;
+    min-height: calc(100vh - 120px); 
+}
+
+.contenido-hero {
+    max-width: 480px;
+    padding-top: 50px;
+}
+
+.contenido-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    color: var(--blanco);
+}
+
+.contenido-hero p {
+    font-size: 1.15rem;
+    color: var(--gris-texto);
+    margin-bottom: 40px;
+}
+
+.acciones-hero {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Botón Principal (Sign Up for Free) */
+.btn-principal {
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+/* Botón Secundario (Learn More) */
+.btn-secundario {
+    background-color: var(--gris-oscuro);
+    border: none;
+    color: var(--blanco);
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+
+/* VISUALIZACIÓN DE IMAGEN */
+.visual-hero {
+    perspective: 1500px;
+    transform-style: preserve-3d; 
+    max-width: 50%; 
+}
+
+.visual-hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7); 
+    transform: rotateY(-7deg) translateZ(50px);
+}
+
+/* --- BARRA INTERMEDIA (Réplica Exacta) --- */
+
+.barra-media {
+    background-color: #2e2e2e;
+    width: 100%;
+    /* Ajustamos el padding para controlar la altura de la barra */
+    padding: 18px 0; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+}
+
+.grupo-enlaces {
+    display: flex;
+    /* Usamos justify-content: space-around; para distribuir los elementos */
+    justify-content: space-around; 
+    align-items: center; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grupo-enlaces a {
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0; 
+    display: inline-block; 
+    
+    /* Leve ajuste de espacio entre letras para imitar el modelo */
+    letter-spacing: 0.5px;
+    
+    /* Damos más espacio horizontal a los enlaces */
+    flex-basis: 22%; 
+    line-height: 1.2; /* Mejora la apariencia de las dos líneas */
+}
+
+/* Estilo para las palabras clave, puestas en <strong> en el HTML */
+.grupo-enlaces a strong {
+    color: var(--blanco); 
+    font-weight: 700; 
+    font-size: 1.1em; 
+    letter-spacing: 0.5px;
+    /* Esto es clave: hace que la palabra clave vaya en una línea nueva y centrada */
+    display: block; 
+}
